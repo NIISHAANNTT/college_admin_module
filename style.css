@@ -1,0 +1,9 @@
+.text-centers{
+    z-index: 85;
+    font-size: xx-large;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: aliceblue;
+}

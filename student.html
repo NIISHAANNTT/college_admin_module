@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Student manage</title>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Deshboard.html">ADMIN PROFILE </a>
+                      </li>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="Att.html">ATTENDANCE</a>
+                  </li>
+
+              <a class="navbar-brand" href="student.html">manage student</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  UPLOAD NOTICE
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="student notice.html">STUDENT NOTICE</a></li>
+                  <li><a class="dropdown-item" href="collage notice.html">COLLEGE NOTICE</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin.html">ADD ADMIN</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="INDEX.HTML">LOGOUT</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+      <!-- BODY -->
+
+
+    <h2 class="text-center">Student manage</h2>
+
+
+
+
+    <div id="items" class="my-4">
+        <h2>Students</h2>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Roll No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Student ID</th> 
+                <th scope="col">Phone no.</th>
+                <th scope="col">Remove Student</th>  
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <tr>
+                <th scope="row">1</th>
+                <td>Rishabh Dubey</td>
+                <td>SSGI20203318</td>
+                <td>8817814541</td> 
+                <td><button class="btn btn-sm btn-primary">Delete</button></td> 
+              </tr>
+
+              <th scope="row">2</th>
+                <td>Surendra Kumar Sahu</td>
+                <td>SSGI20201234</td>
+                <td>1234567890</td> 
+                <td><button class="btn btn-sm btn-primary">Delete</button></td> 
+              </tr>
+              
+
+              <tr>
+                <th scope="row">3</th>
+                <td>Nishant Gupta</td>
+                <td>SSGI20204321</td>
+                <td>98765432101</td> 
+                <td><button class="btn btn-sm btn-primary">Delete</button></td> 
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+
+
+
+
+
+
+
+<div class="container my-20">
+    <h3 class="text-center">Add Student</h3>
+</div>
+
+    
+
+
+
+
+    <div class="container my-4">
+        
+         
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Enter name of new student</small>
+            </div>
+
+            <div class="form-group">
+                <label for="text">Student ID</label>
+                <input type="text" class="form-control" id="SI"  name="ud">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">phone no.</label>
+                <input type="tel" class="form-control is-valid" id="PN"  name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}>
+      <div class="valid-feedback">
+            </div>
+            
+
+            <button   id="add" class="btn btn-primary" onclick="getAndUpdate()">Add Student</button>
+            <button  id="clear" class="btn btn-primary" onclick="clearStorage()">Clear student list</button>
+         
+
+ 
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        
+
+     <script>
+         function getAndUpdate(){
+    console.log("Updating List...");
+    name = document.getElementById('name').value;
+    SI = document.getElementById('SI').value;
+    PN = document.getElementById('PN').value;
+    if (localStorage.getItem('itemsJson')==null){
+        itemJsonArray = [];
+        itemJsonArray.push([name, SI, PN]);
+        localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+    }
+    else{
+        itemJsonArrayStr = localStorage.getItem('itemsJson')
+        itemJsonArray = JSON.parse(itemJsonArrayStr);
+        itemJsonArray.push([name, SI, PN]);
+        localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+    }
+    update();
+}
+
+function update(){
+    if (localStorage.getItem('itemsJson')==null){
+        itemJsonArray = []; 
+        localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+    } 
+    else{
+        itemJsonArrayStr = localStorage.getItem('itemsJson')
+        itemJsonArray = JSON.parse(itemJsonArrayStr); 
+    }
+    // Populate the table
+    let tableBody = document.getElementById("tableBody");
+    let str = "";
+    itemJsonArray.forEach((element, index) => {
+        str += `
+        <tr>
+        <th scope="row">${index + 1}</th>
+        <td>${element[0]}</td>
+        <td>${element[1]}</td>
+        <td>${element[2]}</td>  
+        <td><button class="btn btn-sm btn-primary" onclick="deleted(${index})">Delete</button></td> 
+        </tr>`; 
+    });
+    tableBody.innerHTML = str;
+}
+
+
+// add = document.getElementById("add");
+// add.addEventListener("click", getAndUpdate);
+update();
+function deleted(itemIndex){
+    console.log("Delete", itemIndex);
+    itemJsonArrayStr = localStorage.getItem('itemsJson')
+    itemJsonArray = JSON.parse(itemJsonArrayStr);
+    // Delete itemIndex element from the array
+    itemJsonArray.splice(itemIndex, 1);
+    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+    update();
+
+}
+function clearStorage(){
+    if (confirm("Do you areally want to clear?")){
+    console.log('Clearing the storage')
+    localStorage.clear();
+    update()
+    }
+}
+     </script>   
+</body>
+
+</html>

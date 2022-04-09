@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>
+Login page
+</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <h1 class="text-centers">SHRI SHANKRACHARYA TECHNICAL CAMPUS</h1>
+  </nav>
+  <div class="container" style="background-color:darkgray;">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <h1 class="card-title text-center mb-5 fw-light fs-5">Login</h1>
+            <form>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="user id"name="userid"/>
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"name="pswrd"/>
+                <label for="floatingPassword">Password</label>
+              </div>
+
+              
+              <div class="d-grid">
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit" onclick="check(this.form)" value="Login"/>Login</button>
+              </div>
+            
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
+  {
+    window.open('Deshboard.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script> -->
+
+<script>
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+
+ const ids = ["Rishabh7", "Loda_Nishant", "GanduSurry","Kirt_mutthal","Yusuf"];
+ const ps = ["RishabhKaBadaHai", "NishantKaBhiBadaHai", "SurryKaChhotaHai","KirtKa2SecWalaHai","YusufKaHaiHiNahi"];
+
+
+ for(var i = 0; i<=ids.length; i++){
+  if(form.userid.value == ids[i] && form.pswrd.value == ps[i])
+  {
+    window.open('Deshboard.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+ }
+
+
+}
+
+</script>
+
+</body>
+</html>
